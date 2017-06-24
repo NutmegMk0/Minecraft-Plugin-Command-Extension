@@ -21,7 +21,11 @@ public class CommandBullet implements CommandExecutor{
 			arg0.sendMessage(arg3[0] + " というプレイヤーはいません！");
 		}
 
-		Silverfish Bullet = (Silverfish) player.getWorld().spawnEntity(player.getLocation(), EntityType.SILVERFISH);
+		Silverfish bullet = (Silverfish) player.getWorld().spawnEntity(player.getLocation(), EntityType.SILVERFISH);
+
+		bullet.setCustomName(arg3[1]);
+
+		bullet.setGravity(false);
 
 		return false;
 	}
