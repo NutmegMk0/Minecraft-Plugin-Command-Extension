@@ -1,5 +1,5 @@
-name: LaunchArmorStand
-main: com.gmail.nutmegmk0.main.LaunchArmorStand
+name: CommandExtension
+main: com.github.nutmegmk0.commandextension.main.ComanndExtension
 version: 1.0.0
 commands:
   bullet:
