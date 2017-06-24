@@ -1,0 +1,8 @@
+name: LaunchArmorStand
+main: com.gmail.nutmegmk0.main.LaunchArmorStand
+version: 1.0.0
+commands:
+  bullet:
+    description:
+    usage: /<command> player name speed time invisible
+    default: op
