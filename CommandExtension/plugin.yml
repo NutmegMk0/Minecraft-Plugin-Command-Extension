@@ -1,6 +1,6 @@
 name: CommandExtension
 main: com.github.nutmegmk0.commandextension.main.ComanndExtension
-version: 1.0.0
+version: a0.1.0
 commands:
   bullet:
     description:
