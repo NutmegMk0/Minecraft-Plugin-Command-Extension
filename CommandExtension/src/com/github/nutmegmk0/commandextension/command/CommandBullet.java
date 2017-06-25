@@ -21,11 +21,18 @@ public class CommandBullet implements CommandExecutor{
 		//コマンドの引数メモ：/Bullet 射出元プレイヤー 設定する名前 飛行速度 消滅までのタイマー 透明かどうか
 		//          それの例：/Bullet NutmegMk0 エクスプロージョン 0.5 100(Tick単位) false(true以外なら何でも透明にはならない)
 
+		if (arg3.length != 5) {
+			arg0.sendMessage("引数の数が違います！");
+			return false;
+		}
+
 		Player player =arg0.getServer().getPlayer(arg3[0]);
 
 		if (player == null) {
 
 			arg0.sendMessage(arg3[0] + " というプレイヤーはいません！");
+
+			return false;
 		}
 
 		Silverfish bullet = (Silverfish) player.getWorld().spawnEntity(player.getLocation(), EntityType.SILVERFISH);
@@ -39,6 +46,8 @@ public class CommandBullet implements CommandExecutor{
 		//bullet.setVelocity(vel.multiply(Float.parseFloat(arg3[2])));
 
 		bullet.setInvulnerable(true);
+
+		bullet.setCollidable(false);
 
 		if (arg3[4].equals("true")) {
 
