@@ -79,7 +79,7 @@ public class CommandBullet implements CommandExecutor{
             	count++;
 
             }
-        }.runTaskTimer(CommandExtension.plugin, 0, 0);
+        }.runTaskTimer(CommandExtension.plugin, 0, 1);
 
 		return false;
 	}
