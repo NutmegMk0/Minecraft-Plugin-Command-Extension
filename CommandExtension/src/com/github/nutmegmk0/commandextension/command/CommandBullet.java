@@ -35,7 +35,7 @@ public class CommandBullet implements CommandExecutor{
 			return false;
 		}
 
-		Silverfish bullet = (Silverfish) player.getWorld().spawnEntity(player.getLocation(), EntityType.SILVERFISH);
+		Silverfish bullet = (Silverfish) player.getWorld().spawnEntity(player.getLocation().add(0, 1.7, 0), EntityType.SILVERFISH);
 
 		bullet.setCustomName(arg3[1]);
 
@@ -56,12 +56,14 @@ public class CommandBullet implements CommandExecutor{
 			bullet.addPotionEffect(effect, true);
 		}
 
-		int count = 0;
 
         new BukkitRunnable() {
 
+    		int count = 0;
+
             @Override
             public void run() {
+
 
             	if (count > Integer.parseInt(arg3[3])) {
             		bullet.damage(10000);
@@ -74,8 +76,10 @@ public class CommandBullet implements CommandExecutor{
 
             	bullet.teleport(loc);
 
+            	count++;
+
             }
-        }.runTaskTimer(new CommandExtension(), 0, 0);
+        }.runTaskTimer(CommandExtension.plugin, 0, 0);
 
 		return false;
 	}
