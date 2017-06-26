@@ -44,7 +44,7 @@ public class CommandTrueDamage implements CommandExecutor{
 
 						if (s.contains(arg3[0])) {
 
-							e.setHealth(e.getHealth() - Double.parseDouble(arg3[2]));
+							e.setHealth(e.getHealth() - Double.parseDouble(arg3[1]));
 
 							if (check == false) check = true;
 
