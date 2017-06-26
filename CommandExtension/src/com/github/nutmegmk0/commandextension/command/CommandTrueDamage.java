@@ -26,7 +26,7 @@ public class CommandTrueDamage implements CommandExecutor{
 
 		List<World> worldlist = Bukkit.getWorlds();
 
-		for (int i = 0, n = worldlist.size(); i < n;) {
+		for (int i = 0, n = worldlist.size(); i < n;i++) {
 
 			World w = worldlist.get(i);
 
@@ -34,7 +34,7 @@ public class CommandTrueDamage implements CommandExecutor{
 
 			if (!el.isEmpty()) {
 
-				for (int ii = 0, nn = el.size(); ii < nn;) {
+				for (int ii = 0, nn = el.size(); ii < nn; ii++) {
 
 					LivingEntity e = el.get(ii);
 
@@ -52,8 +52,6 @@ public class CommandTrueDamage implements CommandExecutor{
 
 					}
 
-					ii++;
-
 				}
 
 			}
@@ -63,7 +61,6 @@ public class CommandTrueDamage implements CommandExecutor{
 			//デバッグメッセージ
 			arg0.sendMessage((i + 1) + "つめのワールドのチェックが完了しました ");
 
-			i++;
 		}
 
 		if (check == false) {
