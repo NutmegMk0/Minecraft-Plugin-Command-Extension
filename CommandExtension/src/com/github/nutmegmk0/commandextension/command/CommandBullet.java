@@ -1,5 +1,6 @@
 package com.github.nutmegmk0.commandextension.command;
 
+import org.bukkit.Bukkit;
 import org.bukkit.Location;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -49,6 +50,8 @@ public class CommandBullet implements CommandExecutor{
 
 		bullet.setCollidable(false);
 
+		bullet.setAI(false);
+
 		if (arg3[4].equals("true")) {
 
 			PotionEffect effect = new PotionEffect(PotionEffectType.INVISIBILITY, Integer.parseInt(arg3[3]), 1, false, false);
@@ -67,6 +70,8 @@ public class CommandBullet implements CommandExecutor{
 
             	if (count > Integer.parseInt(arg3[3])) {
             		bullet.damage(10000);
+            		//debug
+            		Bukkit.getServer().broadcastMessage("bulletに10000ダメージ！");
             		cancel();
             	}
 
