@@ -1,6 +1,6 @@
 name: CommandExtension
 main: com.github.nutmegmk0.commandextension.main.CommandExtension
-version: a0.1.0
+version: a0.2.0
 commands:
   bullet:
     description:
@@ -8,5 +8,5 @@ commands:
     default: op
   truedamage:
     description:
-    usage: /<command> SearchTargetScorebordTag Damage
+    usage: /<command> SearchTargetScorebordTag Damage setNoDamageTime
     default: op

@@ -16,7 +16,7 @@ public class CommandTrueDamage implements CommandExecutor{
 	public boolean onCommand(CommandSender arg0, Command arg1, String arg2, String[] arg3) {
 		//引数：検索対象のタグ,ダメージ
 
-		if (arg3.length != 2) {
+		if (arg3.length != 3) {
 
 			arg0.sendMessage("引数の数がおかしいです！");
 			return false;
@@ -44,7 +44,13 @@ public class CommandTrueDamage implements CommandExecutor{
 
 						if (s.contains(arg3[0])) {
 
-							e.setHealth(e.getHealth() - Double.parseDouble(arg3[1]));
+							double damage = e.getHealth() - Double.parseDouble(arg3[1]);
+
+							if (damage < 0) damage = 0;
+
+							e.setHealth(damage);
+
+							if (arg3[2].equals("true")) e.setNoDamageTicks(20);
 
 							if (check == false) check = true;
 
