@@ -6,3 +6,7 @@ commands:
     description:
     usage: /<command> player name speed time invisible
     default: op
+  truedamage:
+    description:
+    usage: /<command> SearchTargetScorebordTag Damage
+    default: op
