@@ -32,25 +32,31 @@ public class CommandTrueDamage implements CommandExecutor{
 
 			List<LivingEntity> el = w.getLivingEntities();
 
-			for (int ii = 0, nn = el.size(); ii < nn;) {
+			if (!el.isEmpty()) {
 
-				LivingEntity e = el.get(ii);
+				for (int ii = 0, nn = el.size(); ii < nn;) {
 
-				Set<String> s = e.getScoreboardTags();
+					LivingEntity e = el.get(ii);
 
-				if (!s.isEmpty()) {
+					Set<String> s = e.getScoreboardTags();
 
-					if (s.contains(arg3[0])) {
+					if (!s.isEmpty()) {
 
-						e.setHealth(e.getHealth() - Double.parseDouble(arg3[2]));
+						if (s.contains(arg3[0])) {
 
-						if (check == false) check = true;
+							e.setHealth(e.getHealth() - Double.parseDouble(arg3[2]));
+
+							if (check == false) check = true;
+
+						}
 
 					}
 
 				}
 
 			}
+
+
 
 			//デバッグメッセージ
 			arg0.sendMessage((i + 1) + "つめのワールドのチェックが完了しました ");
