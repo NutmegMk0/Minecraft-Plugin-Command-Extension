@@ -52,6 +52,8 @@ public class CommandTrueDamage implements CommandExecutor{
 
 					}
 
+					ii++;
+
 				}
 
 			}
