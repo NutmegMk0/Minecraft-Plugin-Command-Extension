@@ -5,8 +5,12 @@ commands:
   bullet:
     description:
     usage: /<command> player name speed time invisible
-    default: op
+    default: false
+    permission: commandextension.broken
+    permission-message: You don't have <permission>
   truedamage:
     description:
     usage: /<command> SearchTargetScorebordTag Damage setNoDamageTime
     default: op
+    permission: commandextension.basic
+    permission-message: You don't have <permission>
