@@ -38,11 +38,15 @@ public class CommandTrueDamage implements CommandExecutor{
 
 				Set<String> s = e.getScoreboardTags();
 
-				if (s.contains(arg3[0])) {
+				if (!s.isEmpty()) {
 
-					e.setHealth(e.getHealth() - Double.parseDouble(arg3[2]));
+					if (s.contains(arg3[0])) {
 
-					if (check == false) check = true;
+						e.setHealth(e.getHealth() - Double.parseDouble(arg3[2]));
+
+						if (check == false) check = true;
+
+					}
 
 				}
 
