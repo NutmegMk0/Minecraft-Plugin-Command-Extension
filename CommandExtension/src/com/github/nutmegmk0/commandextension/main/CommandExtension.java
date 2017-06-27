@@ -21,6 +21,9 @@ public class CommandExtension extends JavaPlugin{
 		CommandTrueDamage comTrueDamage = new CommandTrueDamage();
 		getCommand("truedamage").setExecutor(comTrueDamage);
 
+		CommandTrueDamage comDamage = new CommandTrueDamage();
+		getCommand("damage").setExecutor(comDamage);
+
 	}
 
 
