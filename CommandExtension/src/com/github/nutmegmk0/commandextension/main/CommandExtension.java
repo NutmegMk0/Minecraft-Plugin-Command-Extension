@@ -3,6 +3,7 @@ package com.github.nutmegmk0.commandextension.main;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import com.github.nutmegmk0.commandextension.command.CommandBullet;
+import com.github.nutmegmk0.commandextension.command.CommandDamage;
 import com.github.nutmegmk0.commandextension.command.CommandTrueDamage;
 
 public class CommandExtension extends JavaPlugin{
@@ -21,7 +22,7 @@ public class CommandExtension extends JavaPlugin{
 		CommandTrueDamage comTrueDamage = new CommandTrueDamage();
 		getCommand("truedamage").setExecutor(comTrueDamage);
 
-		CommandTrueDamage comDamage = new CommandTrueDamage();
+		CommandDamage comDamage = new CommandDamage();
 		getCommand("damage").setExecutor(comDamage);
 
 	}
