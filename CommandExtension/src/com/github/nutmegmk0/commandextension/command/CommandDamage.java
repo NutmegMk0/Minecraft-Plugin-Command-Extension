@@ -46,6 +46,8 @@ public class CommandDamage implements CommandExecutor{
 
 							e.damage(Double.parseDouble(arg3[1]));
 
+							check = true;
+
 						}
 
 					}
