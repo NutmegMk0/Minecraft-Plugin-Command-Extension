@@ -10,6 +10,8 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.LivingEntity;
 
+import com.github.nutmegmk0.commandextension.main.CommandExtension;
+
 public class CommandDamage implements CommandExecutor{
 
 	@Override
@@ -59,7 +61,7 @@ public class CommandDamage implements CommandExecutor{
 
 
 			//デバッグメッセージ
-			arg0.sendMessage((i + 1) + "つめのワールドのチェックが完了しました ");
+			if (CommandExtension.debugmode) arg0.sendMessage((i + 1) + "つめのワールドのチェックが完了しました ");
 
 		}
 

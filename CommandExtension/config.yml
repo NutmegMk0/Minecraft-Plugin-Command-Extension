@@ -1,0 +1,5 @@
+# CommandExtension Config
+debug: false
+chunkload:
+  load: false
+  chunks:
