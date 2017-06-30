@@ -9,7 +9,13 @@ public class ConfigManagerChunkloader {
 
 	public static String[] loadChunksString;
 
-	public static void load(CommandExtension plugin) {
+
+	public ConfigManagerChunkloader () {
+
+	}
+
+	public void load (CommandExtension plugin) {
+
 
 		List<String> loadchunks = plugin.config.getStringList("chunkload.load");
 

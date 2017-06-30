@@ -6,17 +6,17 @@ commands:
     description:
     usage: /<command> player name speed time invisible
     default: false
-    permission: commandextension.broken
+    permission: commandextension.basic.bullet
     permission-message: You don't have <permission>
   truedamage:
     description:
     usage: /<command> SearchTargetScorebordTag Damage setNoDamageTime throughNoDamageTick
-    default: op
-    permission: commandextension.basic
+    default: false
+    permission: commandextension.warning.truedamage
     permission-message: You don't have <permission>
   damage:
     description:
     usage: /<command> SearchTargetScorebordTag Damage
     default: op
-    permission: commandextension.basic
+    permission: commandextension.basic.damage
     permission-message: You don't have <permission>

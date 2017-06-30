@@ -1,6 +1,5 @@
 package com.github.nutmegmk0.commandextension.command;
 
-import org.bukkit.Bukkit;
 import org.bukkit.Location;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -69,9 +68,7 @@ public class CommandBullet implements CommandExecutor{
 
 
             	if (count > Integer.parseInt(arg3[3])) {
-            		bullet.damage(10000);
-            		//debug
-            		Bukkit.getServer().broadcastMessage("bulletに10000ダメージ！");
+            		bullet.setHealth(0);
             		cancel();
             	}
 

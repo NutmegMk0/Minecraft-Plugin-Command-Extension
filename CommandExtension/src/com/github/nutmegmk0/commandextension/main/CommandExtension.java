@@ -12,6 +12,9 @@ public class CommandExtension extends JavaPlugin{
 
 	public static CommandExtension plugin;
 
+	public static ConfigManagerChunkloader managerChunkloader;
+
+
 	public FileConfiguration config;
 
 	public static boolean debugmode;
@@ -21,11 +24,17 @@ public class CommandExtension extends JavaPlugin{
 
 		plugin = this;
 
+		managerChunkloader = new ConfigManagerChunkloader();
+
+
 		config = getConfig();
 
 		debugmode = config.getBoolean("debug");
 
-		ConfigManagerChunkloader.load(plugin);
+
+		managerChunkloader.load(plugin);
+
+
 
 		//コマンド登録
 		CommandBullet comBullet = new CommandBullet();
